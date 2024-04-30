@@ -1,10 +1,19 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import svgHome from '/home.svg';
+import svgRequests from '/requests.svg';
+import svgNotes from '/notes.svg';
+import svgFolder from '/folder.svg';
+import svgUser from '/users.svg';
+import svgChart from '/chart.svg';
+import svgStar from '/star.svg';
+import svgChat from '/chat.svg';
+
 const menuItems = ref([
   {
     title: 'Главная',
     link: '/',
-    path: process.env.NODE_ENV === 'production' ? '/gusevfilm/home.svg' : '/home.svg',
+    path: svgHome,
     alt: 'Пункт основного меню для главной страницы',
     alert: {
       isAlerting: false,
@@ -14,7 +23,7 @@ const menuItems = ref([
   {
     title: 'Запросы',
     link: '/requests',
-    path: process.env.NODE_ENV === 'production' ? '/gusevfilm/requests.svg' : '/requests.svg',
+    path: svgRequests,
     alt: 'Пункт основного меню для страницы запросов',
     alert: {
       isAlerting: true,
@@ -24,7 +33,7 @@ const menuItems = ref([
   {
     title: 'Заметки',
     link: '/notes',
-    path: '/notes.svg',
+    path: svgNotes,
     alt: 'Пункт основного меню для страницы с заметками',
     alert: {
       isAlerting: false,
@@ -34,7 +43,7 @@ const menuItems = ref([
   {
     title: 'Категории',
     link: '/categories',
-    path: '/folder.svg',
+    path: svgFolder,
     alt: 'Пункт основного меню для страницы категорий',
     alert: {
       isAlerting: false,
@@ -44,7 +53,7 @@ const menuItems = ref([
   {
     title: 'Пользователи',
     link: '/users',
-    path: '/users.svg',
+    path: svgUser,
     alt: 'Пункт основного меню для страницы пользователей',
     alert: {
       isAlerting: false,
@@ -54,7 +63,7 @@ const menuItems = ref([
   {
     title: 'Статистика',
     link: '/statistics',
-    path: '/chart.svg',
+    path: svgChart,
     alt: 'Пункт основного меню для страницы статистики',
     alert: {
       isAlerting: false,
@@ -64,7 +73,7 @@ const menuItems = ref([
   {
     title: 'Избранное',
     link: '/favourites',
-    path: '/star.svg',
+    path: svgStar,
     alt: 'Пункт основного меню для страницы статистики',
     alert: {
       isAlerting: false,
@@ -74,7 +83,7 @@ const menuItems = ref([
   {
     title: 'Поддержка',
     link: '/support',
-    path: '/chat.svg',
+    path: svgChat,
     alt: 'Пункт основного меню для страницы поддержки',
     alert: {
       isAlerting: false,

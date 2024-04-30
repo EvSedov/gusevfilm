@@ -4,18 +4,22 @@ import MainMenu from '../components/MainMenu.vue';
 import SubMenuSection from '../components/SubMenuSection.vue';
 import TableOfContents from '../components/TableOfContents.vue';
 import TheArticle from '../components/Article.vue';
+import svgQuestion from '/question.svg';
+import svgMedal from '/medal.svg';
+import svgMan from '/man.svg';
+import svgGear from '/gear.svg';
 
 const titleSubMenuInfo = 'Информация';
 const itemsSubMenuInfo = [
   {
     text: 'База знаний',
-    path: '/question.svg',
+    path: svgQuestion,
     alt: 'Пункт база знаний информационного меню',
     isActive: true,
   },
   {
     text: 'Обновления',
-    path: '/medal.svg',
+    path: svgMedal,
     alt: 'Пункт обновления информационного меню',
     isActive: false,
   }
@@ -25,13 +29,13 @@ const titleSubMenuSettings = 'Настройки';
 const itemsSubMenuSettings = [
   {
     text: 'Профиль',
-    path: '/man.svg',
+    path: svgMan,
     alt: 'Пункт профиль меню настроек',
     isActive: false,
   },
   {
     text: 'Общие настройки',
-    path: '/gear.svg',
+    path: svgGear,
     alt: 'Пункт общие настройки меню настроек',
     isActive: false,
   }
