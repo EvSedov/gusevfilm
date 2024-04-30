@@ -4,7 +4,7 @@ const menuItems = ref([
   {
     title: 'Главная',
     link: '/',
-    path: '/home.svg',
+    path: process.env.NODE_ENV === 'production' ? '/gusevfilm/home.svg' : '/home.svg',
     alt: 'Пункт основного меню для главной страницы',
     alert: {
       isAlerting: false,
@@ -14,7 +14,7 @@ const menuItems = ref([
   {
     title: 'Запросы',
     link: '/requests',
-    path: '/requests.svg',
+    path: process.env.NODE_ENV === 'production' ? '/gusevfilm/requests.svg' : '/requests.svg',
     alt: 'Пункт основного меню для страницы запросов',
     alert: {
       isAlerting: true,
