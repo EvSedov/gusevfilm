@@ -8,7 +8,8 @@ defineProps<{
   lists?: string[]
   tabs?: {
     titles: string[]
-    paragraphs?: string[]
+    paragraphs: string[]
+    checked: boolean[]
   }
   recommendations?: string[]
 }>()
@@ -26,7 +27,15 @@ defineProps<{
     <ol class="lists" v-if="lists">
       <li v-for="item in lists">{{ item }}</li>
     </ol>
-    <ul class="tabs" v-if="tabs"></ul>
+    <div class="tabs" v-if="tabs">
+      <template v-for="(title, index) in tabs.titles" :key="index">
+        <input :checked="tabs.checked[index]" :id="`tab-btn-${index}`" name="tab-btn" type="radio" value="">
+        <label :for="`tab-btn-${index}`">{{ title }}</label>
+      </template>
+      <div class="tab-content" :id="`content-${index}`" v-for="(tabText, index) in tabs.paragraphs" :key="index">
+        {{ tabText }}
+      </div>
+    </div>
     <div class="recommendations" v-if="recommendations">
       <p class="text">Рекомендации:</p>
       <p class="text" v-for="recom in recommendations">{{ recom }}</p>
@@ -107,6 +116,46 @@ h2 {
   line-height: 32px;
   font-size: 16px;
   border-radius: 50%;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 28px;
+}
+
+.tabs>input[type="radio"] {
+  display: none;
+}
+
+.tab-content {
+  display: none;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+#tab-btn-0:checked~#content-0,
+#tab-btn-1:checked~#content-1,
+#tab-btn-2:checked~#content-2 {
+  display: block;
+}
+
+.tabs>label {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+  transition: color .15s ease-in-out, border-color .15s ease-in-out;
+  color: #5A607F;
+  background: 0 0;
+  border-bottom: 0.125rem solid transparent;
+}
+
+.tabs>input[type="radio"]:checked+label {
+  cursor: default;
+  font-weight: bold;
+  color: #1E5EFF;
+  border-bottom-color: #1E5EFF;
 }
 
 .recommendations {

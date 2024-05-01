@@ -57,6 +57,11 @@ const thirdParagraphs = [
   'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio facilis minima necessitatibus ducimus illo sed quo deserunt excepturi sunt non enim inventore aliquam esse asperiores ea dolorem quibusdam est.',
   'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, doloribus, nulla. Soluta error repudiandae cumque veniam fugiat.'
 ];
+const thirdTabs = {
+  titles: ['Пункт 11', 'Пункт 10', 'Пункт 9'],
+  paragraphs: ['Контент для пункта 11', 'Контент для пункта 10', 'Контент для пункта 9'],
+  checked: [false, true, false]
+}
 
 </script>
 
@@ -89,7 +94,7 @@ const thirdParagraphs = [
           <TheArticle class="content" :title="firstTitle" :btn="firstBtn" :paragraphs="firstParagraphs"
             :recommendations="firstRecommendations" />
           <TheArticle class="content" :title="secondTitle" :paragraphs="secondParagraphs" :lists="secondLists" />
-          <TheArticle class="content" :title="thirdTitle" :paragraphs="thirdParagraphs" />
+          <TheArticle class="content" :title="thirdTitle" :paragraphs="thirdParagraphs" :tabs="thirdTabs" />
         </div>
       </div>
     </div>
