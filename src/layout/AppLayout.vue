@@ -47,6 +47,11 @@ const firstParagraphs = ['Lorem ipsum dolor sit amet consectetur adipisicing eli
 const firstRecommendations = ['Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Fugiat.'];
 const secondTitle = 'Начало работы';
 const secondParagraphs = ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sunt, iste animi, quia numquam, rerum veritatis itaque tempore facilis repellendus harum reiciendis.'];
+const secondLists = [
+  'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, doloribus, nulla. Soluta error repudiandae cumque veniam fugiat, voluptatem repellat provident, pariatur.',
+  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis harum delectus nemo iure praesentium amet, maxime veniam.',
+  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus aut nam earum! Lorem ipsum dolor sit amet.',
+]
 const thirdTitle = 'Дополнительная информация';
 const thirdParagraphs = [
   'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio facilis minima necessitatibus ducimus illo sed quo deserunt excepturi sunt non enim inventore aliquam esse asperiores ea dolorem quibusdam est.',
@@ -69,10 +74,10 @@ const thirdParagraphs = [
       <div class="back">Назад</div>
       <div class="main-articles">
         <TableOfContents />
-        <div class="article">
+        <div class="articles">
           <TheArticle class="content" :title="firstTitle" :btn="firstBtn" :paragraphs="firstParagraphs"
             :recommendations="firstRecommendations" />
-          <TheArticle class="content" :title="secondTitle" :paragraphs="secondParagraphs" />
+          <TheArticle class="content" :title="secondTitle" :paragraphs="secondParagraphs" :lists="secondLists" />
           <TheArticle class="content" :title="thirdTitle" :paragraphs="thirdParagraphs" />
         </div>
       </div>
@@ -93,6 +98,10 @@ const thirdParagraphs = [
   box-shadow: 0px 1px 4px 0px rgba(21, 34, 50, 0.08);
 }
 
+.main {
+  padding-right: 40px;
+}
+
 .back {
   padding-top: 29px;
   padding-left: 40px;
@@ -103,9 +112,10 @@ const thirdParagraphs = [
   color: #5A607F;
 }
 
-.article {
-  width: 100%;
-  gap: 30px;
+.articles {
+  padding: 28px;
   background-color: #FFF;
+  border-radius: 6px;
+  box-shadow: 0px 1px 4px 0px rgba(21, 34, 50, 0.08);
 }
 </style>
