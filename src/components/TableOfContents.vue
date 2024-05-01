@@ -30,24 +30,25 @@ const items = ref([
 </script>
 
 <template>
-  <div class="table">
+  <div class="wrap-table">
     <h2>{{ title }}</h2>
-    <ul class="table-items">
-      <li :class="{ activeItem: item.isActive }" v-for="item in items">
-        <span>{{ item.text }}</span>
+    <ul class="table">
+      <li class="table-item" :class="{ 'item-active': item.isActive }" v-for="item in items">
+        <a>{{ item.text }}</a>
       </li>
     </ul>
   </div>
 </template>
 
 <style scoped>
-.table {
-  width: 335px;
+.wrap-table {
   margin: 0 40px;
-
+  margin-right: 30px;
 }
 
 h2 {
+  display: inline-block;
+  width: 245px;
   margin: 0;
   margin-bottom: 30px;
   padding: 0;
@@ -58,7 +59,24 @@ h2 {
   text-align: left;
 }
 
-.table-items li {
+.table-item {
   display: flex;
+}
+
+.table-item a {
+  width: 100%;
+  padding: 12px 20px;
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  border-radius: 4px;
+}
+
+.item-active a {
+  background-color: #1E5EFF;
+  color: #FFF;
 }
 </style>

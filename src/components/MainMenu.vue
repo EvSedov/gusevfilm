@@ -109,6 +109,7 @@ const menuItems = ref([
 .main-menu {
   display: flex;
   flex-direction: column;
+  padding-top: 16px;
   padding-bottom: 28px;
   list-style-type: none;
 }
