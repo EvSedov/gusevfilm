@@ -89,6 +89,10 @@ input[type="text"] {
   margin-right: 34px;
 }
 
+.profile {
+  align-items: center;
+}
+
 .user-icon {
   height: 39px;
   width: 39px;
