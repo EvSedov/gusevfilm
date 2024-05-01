@@ -73,6 +73,7 @@ h2 {
   letter-spacing: 0px;
   text-align: left;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .item-active a {
