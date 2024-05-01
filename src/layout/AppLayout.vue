@@ -4,6 +4,8 @@ import MainMenu from '../components/MainMenu.vue';
 import SubMenuSection from '../components/SubMenuSection.vue';
 import TableOfContents from '../components/TableOfContents.vue';
 import TheArticle from '../components/Article.vue';
+import HelpArticle from '../components/HelpArticle.vue';
+import Card from '../components/Card.vue';
 import svgQuestion from '/question.svg';
 import svgMedal from '/medal.svg';
 import svgMan from '/man.svg';
@@ -63,19 +65,39 @@ const thirdTabs = {
   checked: [false, true, false]
 }
 
+const cards = [
+  {
+    title: 'Сообщество GusevFilm',
+    text: 'Обращайтесь за помощью к членам сообщества, задавайте любые вопросы и получайте ответы.',
+    link: {
+      href: '',
+      text: 'Присоединиться к сообществу'
+    }
+  },
+  {
+    title: 'GusevFilm Connect',
+    text: 'Пользуйтесь всеми возможностями GB. Пройдите регистрацию в GB Connect.',
+    link: {
+      href: '',
+      text: 'Регистрация'
+    }
+  }
+];
+
+
 </script>
 
 <template>
   <TheHeader />
   <main class="main container">
 
-    <div class="menu">
+    <div class="main-menu">
       <MainMenu />
       <SubMenuSection :title="titleSubMenuInfo" :subMenuItems="itemsSubMenuInfo" />
       <SubMenuSection :title="titleSubMenuSettings" :subMenuItems="itemsSubMenuSettings" />
     </div>
 
-    <div>
+    <div class="main-content">
       <div class="back">
         <svg width="13.000000" height="10.000000" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -91,11 +113,22 @@ const thirdTabs = {
       <div class="main-articles">
         <TableOfContents />
         <div class="articles">
-          <TheArticle class="content" :title="firstTitle" :btn="firstBtn" :paragraphs="firstParagraphs"
-            :recommendations="firstRecommendations" />
-          <TheArticle class="content" :title="secondTitle" :paragraphs="secondParagraphs" :lists="secondLists" />
-          <TheArticle class="content" :title="thirdTitle" :paragraphs="thirdParagraphs" :tabs="thirdTabs" />
+          <div class="articles-content">
+            <TheArticle class="content" :title="firstTitle" :btn="firstBtn" :paragraphs="firstParagraphs"
+              :recommendations="firstRecommendations" />
+            <TheArticle class="content" :title="secondTitle" :paragraphs="secondParagraphs" :lists="secondLists" />
+            <TheArticle class="content" :title="thirdTitle" :paragraphs="thirdParagraphs" :tabs="thirdTabs" />
+            <HelpArticle />
+          </div>
+
+          <div class="cards">
+            <Card :cardTitle="card.title" :cardText="card.text" :cardLink="card.link" v-for="(card, index) in cards"
+              :key="index" />
+          </div>
+
         </div>
+
+
       </div>
     </div>
 
@@ -109,13 +142,18 @@ const thirdTabs = {
   display: flex;
 }
 
-.main,
-.menu {
+.main {
+  min-height: 100vh;
   box-shadow: 0px 1px 4px 0px rgba(21, 34, 50, 0.08);
+  padding-right: 40px;
 }
 
-.main {
-  padding-right: 40px;
+.main-menu {
+  border-right: 1px solid rgba(21, 34, 50, 0.08);
+}
+
+.main-content {
+  margin-bottom: 40px;
 }
 
 .back {
@@ -129,10 +167,16 @@ const thirdTabs = {
   cursor: pointer;
 }
 
-.articles {
+.articles-content {
+  margin-bottom: 30px;
   padding: 28px;
   background-color: #FFF;
   border-radius: 6px;
   box-shadow: 0px 1px 4px 0px rgba(21, 34, 50, 0.08);
+}
+
+.cards {
+  display: flex;
+  gap: 39px;
 }
 </style>
