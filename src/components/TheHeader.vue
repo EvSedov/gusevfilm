@@ -36,7 +36,11 @@ const badge = ref(5)
       <span class="badge" v-if="badge > 0">{{ badge }}</span>
       <div class="profile">
         <div class="user-icon"></div>
-        <div class="user-name">Саша Опытная</div>
+        <select class="user-name">
+          <option selected value="">Саша Опытная</option>
+          <option value="">Сменить пользователя</option>
+          <option value="">Выход</option>
+        </select>
       </div>
     </div>
 
@@ -132,7 +136,13 @@ const badge = ref(5)
 }
 
 .profile {
+  display: flex;
+  /* width: 185px; */
   align-items: center;
+}
+
+.profile select {
+  width: 137px;
 }
 
 .user-icon {
