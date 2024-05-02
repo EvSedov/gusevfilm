@@ -6,6 +6,7 @@ import TableOfContents from '../components/TableOfContents.vue';
 import TheArticle from '../components/Article.vue';
 import HelpArticle from '../components/HelpArticle.vue';
 import Card from '../components/Card.vue';
+import Search from '../components/Search.vue';
 import svgQuestion from '/question.svg';
 import svgMedal from '/medal.svg';
 import svgMan from '/man.svg';
@@ -113,6 +114,7 @@ const cards = [
       <div class="main-articles">
         <TableOfContents />
         <div class="articles">
+          <Search />
           <div class="articles-content">
             <TheArticle class="content" :title="firstTitle" :btn="firstBtn" :paragraphs="firstParagraphs"
               :recommendations="firstRecommendations" />
