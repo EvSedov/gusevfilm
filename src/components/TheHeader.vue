@@ -1,4 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from 'vue';
+const badge = ref(5)
+</script>
 
 <template>
   <header class="header container">
@@ -30,6 +33,7 @@
     <div class="user-profile">
       <img class="message" src="/chat.svg" alt="">
       <img class="alerts" src="/alert.svg" alt="">
+      <span class="badge" v-if="badge > 0">{{ badge }}</span>
       <div class="profile">
         <div class="user-icon"></div>
         <div class="user-name">Саша Опытная</div>
@@ -63,8 +67,6 @@
   letter-spacing: 0px;
   text-align: left;
 }
-
-.logo:hover {}
 
 .logo span {
   margin-top: 18px;
@@ -102,6 +104,7 @@
 
 .user-profile {
   margin-left: auto;
+  position: relative;
 }
 
 .message {
@@ -110,6 +113,22 @@
 
 .alerts {
   margin-right: 34px;
+}
+
+.badge {
+  position: absolute;
+  top: 4px;
+  left: 57px;
+  padding: 4px 5px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: #1E5EFF;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 8px;
+  border-radius: 50%;
 }
 
 .profile {
