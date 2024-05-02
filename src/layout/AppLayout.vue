@@ -56,14 +56,13 @@ const secondLists = [
   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus aut nam earum! Lorem ipsum dolor sit amet.',
 ]
 const thirdTitle = 'Дополнительная информация';
-const thirdParagraphs = [
-  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio facilis minima necessitatibus ducimus illo sed quo deserunt excepturi sunt non enim inventore aliquam esse asperiores ea dolorem quibusdam est.',
-  'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, doloribus, nulla. Soluta error repudiandae cumque veniam fugiat.'
-];
 const thirdTabs = {
   titles: ['Пункт 11', 'Пункт 10', 'Пункт 9'],
-  paragraphs: ['Контент для пункта 11', 'Контент для пункта 10', 'Контент для пункта 9'],
-  checked: [false, true, false]
+  paragraphs: [
+    'Контент для пункта 11. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio facilis minima necessitatibus ducimus illo sed quo deserunt excepturi sunt non enim inventore aliquam esse asperiores ea dolorem quibusdam est. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, doloribus, nulla. Soluta error repudiandae cumque veniam fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio facilis minima necessitatibus ducimus illo sed quo deserunt excepturi sunt non enim inventore aliquam esse asperiores ea dolorem quibusdam est. Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
+    'Контент для пункта 10',
+    'Контент для пункта 9'],
+  checked: [true, false, false]
 }
 
 const cards = [
@@ -121,7 +120,7 @@ const cards = [
             <TheArticle class="content" :title="firstTitle" :btn="firstBtn" :paragraphs="firstParagraphs"
               :recommendations="firstRecommendations" />
             <TheArticle class="content" :title="secondTitle" :paragraphs="secondParagraphs" :lists="secondLists" />
-            <TheArticle class="content" :title="thirdTitle" :paragraphs="thirdParagraphs" :tabs="thirdTabs" />
+            <TheArticle class="content" :title="thirdTitle" :tabs="thirdTabs" />
             <HelpArticle />
           </div>
 
@@ -177,9 +176,15 @@ const cards = [
 .articles-content {
   margin-bottom: 30px;
   padding: 28px;
+  padding-top: 20px;
   background-color: #FFF;
   border-radius: 6px;
   box-shadow: 0px 1px 4px 0px rgba(21, 34, 50, 0.08);
+}
+
+.articles {
+  width: 825px;
+  margin-top: 23px;
 }
 
 .cards {

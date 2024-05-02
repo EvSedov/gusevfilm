@@ -54,9 +54,8 @@ defineProps<{
 
 .header-article {
   width: 100%;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -64,12 +63,13 @@ h2 {
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
-  letter-spacing: 0px;
   text-align: left;
 }
 
 .btn {
-  padding: 9px 29.5px;
+  margin-left: auto;
+  margin-right: 3px;
+  padding: 9px 32px;
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
@@ -82,23 +82,25 @@ h2 {
   margin-bottom: 24px;
   font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 23px;
   text-align: left;
+  letter-spacing: .5px;
 }
 
 .lists {
   list-style-type: none;
   counter-reset: num;
-  margin: 0 0 8px 60px;
-  padding: 15px 0 5px 0;
+  margin-left: 60px;
+  padding: 0 0 5px 0;
   font-size: 16px;
 }
 
 .lists li {
   position: relative;
   margin: 0 0 0 0;
-  padding: 0 0 20px 0;
+  padding: 0 0 24px 0;
   line-height: 1.4;
+  letter-spacing: .5px;
 }
 
 .lists li::before {
@@ -121,7 +123,7 @@ h2 {
 .tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
   margin-bottom: 28px;
 }
 
@@ -132,7 +134,7 @@ h2 {
 .tab-content {
   display: none;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: -13px;
 }
 
 #tab-btn-0:checked~#content-0,
@@ -142,8 +144,8 @@ h2 {
 }
 
 .tabs>label {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.9rem;
   cursor: pointer;
   transition: color .15s ease-in-out, border-color .15s ease-in-out;
   color: #5A607F;
@@ -163,8 +165,13 @@ h2 {
   padding: 20px;
   border-radius: 4px;
   font-weight: 500;
+  letter-spacing: .5px;
   background-color: #F5F6FA;
   color: rgb(90, 96, 127);
+}
+
+.recommendations>.text {
+  margin-bottom: 4px;
 }
 
 .line {

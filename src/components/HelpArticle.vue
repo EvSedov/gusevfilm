@@ -22,13 +22,13 @@ h2 {
 }
 
 button {
-  margin-right: 12px;
-  margin-bottom: 12px;
+  margin-right: 13px;
+  margin-bottom: 10px;
+  padding: 7px 21px;
   box-sizing: border-box;
   border: 1px solid rgb(215, 219, 236);
   border-radius: 4px;
   background: rgb(255, 255, 255);
-  padding: 8px 23px;
 
   color: rgb(30, 94, 255);
   font-size: 14px;
@@ -42,10 +42,12 @@ button:hover {
 }
 
 p {
+  margin-bottom: 10px;
   color: rgb(90, 96, 127);
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
   text-align: left;
+  letter-spacing: .5px;
 }
 </style>
