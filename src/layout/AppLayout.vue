@@ -189,6 +189,6 @@ const cards = [
 
 .cards {
   display: flex;
-  gap: 39px;
+  gap: 32px;
 }
 </style>
