@@ -72,6 +72,10 @@ const badge = ref(5)
   text-align: left;
 }
 
+.logo:hover {
+  box-shadow: none;
+}
+
 .logo span {
   margin-top: 18px;
   margin-bottom: 19px;
