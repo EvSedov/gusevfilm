@@ -68,7 +68,7 @@ const badge = ref(5)
   text-align: center;
   font-weight: 700;
   line-height: 31px;
-  letter-spacing: 0px;
+  letter-spacing: 1px;
   text-align: left;
 }
 
@@ -80,7 +80,7 @@ const badge = ref(5)
 
 .search {
   position: relative;
-  margin-left: 91px;
+  margin-left: 83px;
 }
 
 #search-input {
@@ -88,7 +88,7 @@ const badge = ref(5)
   width: 100%;
   height: calc(2.25rem + 2px);
   padding: 0.375rem 0.75rem;
-  padding-left: 35px;
+  padding-left: 38px;
   font-family: inherit;
   font-size: 0.876rem;
   font-weight: 400;
@@ -108,6 +108,7 @@ const badge = ref(5)
 
 .user-profile {
   margin-left: auto;
+  margin-right: 5px;
   position: relative;
 }
 

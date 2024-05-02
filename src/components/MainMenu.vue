@@ -133,7 +133,7 @@ const menuItems = ref([
 
 .text {
   margin: 12px 0;
-  margin-left: 19px;
+  margin-left: 16px;
   display: inline-block;
   font-size: 14px;
   font-weight: 500;

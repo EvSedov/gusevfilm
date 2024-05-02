@@ -36,7 +36,7 @@ defineProps<{
   color: rgb(161, 167, 196);
   font-size: 12px;
   font-weight: 600;
-  line-height: 16px;
+  line-height: 15px;
   text-align: left;
   margin-bottom: 12px;
   padding-left: 32px;
