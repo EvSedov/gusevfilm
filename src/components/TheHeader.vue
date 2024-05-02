@@ -55,6 +55,14 @@ const badge = ref(5)
   display: flex;
 }
 
+.message,
+.alerts,
+.badge,
+.user-icon,
+.user-name {
+  cursor: pointer;
+}
+
 .header {
   display: flex;
   background-color: #FFF;
