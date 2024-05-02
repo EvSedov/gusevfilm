@@ -60,17 +60,18 @@ h2 {
 }
 
 .table-item {
+  width: 255px;
   display: flex;
 }
 
 .table-item a {
   width: 100%;
   padding: 12px 20px;
-  padding-left: 10px;
+  padding-left: 18px;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
-  letter-spacing: 0px;
+  letter-spacing: 0.3px;
   text-align: left;
   border-radius: 4px;
   cursor: pointer;
