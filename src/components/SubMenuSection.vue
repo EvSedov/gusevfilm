@@ -1,11 +1,12 @@
 <script setup lang="ts">
+import { RouterLink } from 'vue-router';
 defineProps<{
   title?: string
   subMenuItems?: {
     text: string
+    link: string
     path: string
     alt: string
-    isActive: boolean
   }[]
 }>()
 
@@ -15,12 +16,11 @@ defineProps<{
 <template>
   <p class="title">{{ title }}</p>
   <ul class="sub-menu">
-    <li class="item-sub-menu" :class="{ 'item-active': item.isActive }" v-if="subMenuItems"
-      v-for="item in subMenuItems">
-      <a href="#">
+    <li class="item-sub-menu" v-if="subMenuItems" v-for="item in subMenuItems">
+      <RouterLink :to="item.link">
         <img :src="item.path" :alt="item.alt">
         <span>{{ item.text }}</span>
-      </a>
+      </RouterLink>
     </li>
   </ul>
 </template>
@@ -66,10 +66,5 @@ defineProps<{
   line-height: 20px;
   letter-spacing: 1px;
   text-align: left;
-}
-
-.item-active a {
-  background-color: #1E5EFF;
-  color: #FFF;
 }
 </style>

@@ -51,7 +51,8 @@ select {
   margin: 0 auto;
 }
 
-a {
+a,
+RouterView {
   font-weight: 500;
   color: rgb(90, 96, 127);
   font-size: 14px;
@@ -59,7 +60,8 @@ a {
   cursor: pointer;
 }
 
-a:hover {
+a:hover,
+RouterView:hover {
   box-shadow: 0px 1px 4px 0px rgba(21, 34, 50, 0.08);
 }
 
@@ -89,13 +91,19 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.active {
+  background-color: #1E5EFF;
+  color: #FFF;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #131523;
     background-color: #F5F6FA;
   }
 
-  a:hover {
+  a:hover,
+  RouterView:hover {
     color: #747bff;
   }
 

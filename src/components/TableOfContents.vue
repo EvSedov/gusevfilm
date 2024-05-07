@@ -33,8 +33,8 @@ const items = ref([
   <div class="wrap-table">
     <h2>{{ title }}</h2>
     <ul class="table">
-      <li class="table-item" :class="{ 'item-active': item.isActive }" v-for="item in items">
-        <a>{{ item.text }}</a>
+      <li class="table-item" v-for="item in items">
+        <a :class="{ 'active': item.isActive }">{{ item.text }}</a>
       </li>
     </ul>
   </div>
@@ -77,7 +77,7 @@ h2 {
   cursor: pointer;
 }
 
-.item-active a {
+.active {
   background-color: #1E5EFF;
   color: #FFF;
 }

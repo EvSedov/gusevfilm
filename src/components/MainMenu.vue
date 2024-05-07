@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
 import svgHome from '/home.svg';
 import svgRequests from '/requests.svg';
 import svgNotes from '/notes.svg';
@@ -96,11 +97,11 @@ const menuItems = ref([
 <template>
   <ul class="main-menu">
     <li class="menu-item" v-for="(item, index) in menuItems" :key="index">
-      <a :href="item.link">
+      <RouterLink :to="item.link">
         <img :src="item.path" :alt="item.alt">
         <span class="text">{{ item.title }}</span>
         <span class="msg" v-if="item.alert.isAlerting">{{ item.alert.msg }}</span>
-      </a>
+      </RouterLink>
     </li>
   </ul>
 </template>
